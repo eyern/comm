@@ -150,7 +150,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # MEDIA
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/app/data')
 
 
 from django.contrib.messages import constants as messages
