@@ -1,0 +1,414 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Two Of Us Communication{% endblock title %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.jpg' %}">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- google fonts -->
+    <!-- CSS only -->
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- all css here -->
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <!-- pe-icon-7-stroke -->
+    <link rel="stylesheet" href="{% static 'css/materialdesignicons.min.css' %}">
+    <!-- pe-icon-7-stroke -->
+    <link rel="stylesheet" href="{% static 'css/jquery.simpleLens.css' %}">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+    <!-- nivo.slider css -->
+    <link rel="stylesheet" href="{% static 'css/nivo-slider.css' %}">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- modernizr js -->
+
+
+    
+    <style> 
+        #searchh input[type=text] {
+        width: 150px;
+        margin-top:10px;
+        margin-bottom:10px;
+        box-sizing: border-box;
+        border: 2px solid #1e81b0;
+        border-radius: 4px;
+        font-size: 16px;
+        color:#000;
+        background-color: #fff;
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        }
+
+        #searchh input[type=text]:focus {
+        width: 80%;
+        }
+    </style>
+
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://www.paypal.com/sdk/js?client-id=ATDakGEFESlSq0xbOzxw0W-dZUWrKfiedaKAFHEk0QKfsUeeR_9j6G1A78TUmvFJuMvz3ArZroEobPHY&currency=USD"></script>
+    
+</head>
+
+<body style="background:#fff">
+
+    <!-- header section start -->
+    <header style="background:#fff" class="header-one header-two">
+        <div style="background:#000" class="header-top-two">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="middel-top">
+                            {% if user.id is None %}
+                            <div class="left floatleft">
+                                <p style="color:#fff"><b>Welcome Guest!</b></p>
+                            </div>
+                            {% else %}
+                            <div class="left floatleft">
+                                <p style="color:#fff"><b>Welcome {{user.first_name | capfirst}}!</b></p>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="middel-top clearfix">
+                            <ul class="clearfix right floatright">
+                                <li>
+                                    <a style="color:#fff" href="#"><i class="mdi mdi-account"></i></a>
+                                    {% if user.id is None %}
+                                    <ul style="background:#fff">
+                                        <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                                        <li><a href="{% url 'accounts:register' %}">Register</a></li>
+                                    </ul>
+                                    {% else %}
+                                    <ul style="background:#fff">
+                                        <li><a href="{% url 'accounts:dashboard' %}">Dashboard</a></li>
+                                        <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
+                                    </ul>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    <a style="color:#1e81b0" href="tel:+254735413243"><i class="mdi mdi-phone-incoming"></i></a>
+                                    <ul style="background:#fff">
+                                        <li><a href="tel:+254735413243">Help Centre</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!--
+                            <div class="right floatright">
+                               
+                                     <form action="{% url 'shop:search' %}" method="GET" >
+                                    <button style="color:#1e81b0" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                    <input type="text" placeholder="Search..." name="keyword"/>
+                                    </form>
+                            -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="logo">
+                        <a href="\" class="logo"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="header-middel">
+                        <div class="mainmenu">
+                            <nav >
+                                <ul>
+                                    <li ><a href="\">Home</a></li>
+                                    <li><a href="{% url 'shop:shop' %}">Shop</a></li>
+                                    <li><a href="#">All Categories <i class="mdi mdi-arrow-down"></i></a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'shop:shop' %}">All</a></li>
+                                            {% for category in categories %}
+                                            <li><a href="{{ category.get_category_slug_url }}">{{category.name}}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">News/Offers</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="{% url 'shop:contact' %}">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- mobile menu start -->
+                        <div class="mobile-menu-area">
+                            <div class="mobile-menu">
+                                <nav  id="dropdown">
+                                    <ul>
+                                        <li><a style="color:#fff" href="\">Home</a></li>
+                                        <li><a style="color:#fff" href="{% url 'shop:shop' %}">Shop</a></li>
+                                        <li><a style="color:#fff" href="{% url 'shop:shop' %}">All Categories</a>
+                                            <ul class="dropdown">
+                                                <li><a style="color:#fff" href="{% url 'shop:shop' %}">All</a></li>
+                                                {% for category in categories %}
+                                                <li><a style="color:#fff" href="{{ category.get_category_slug_url }}">{{category.name}}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                        <li><a style="color:#fff" href="#">News/Updates</a></li>
+                                        <li><a style="color:#fff" href="#">About</a></li>
+                                        <li><a style="color:#fff" href="{% url 'shop:contact' %}">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="cart-itmes">
+                        <a class="cart-itme-a" href="{% url 'cart:cart' %}">
+
+                            <i class="mdi mdi-cart"></i>
+                            {{quantityyy}} items : <strong>KSh {{totalll}}</strong>
+                        </a>
+                        <div class="cartdrop">
+                            {% for x in cart_itemsss %}
+                            <div class="sin-itme clearfix">
+                                <a style="color:#fff" href="{% url 'cart:remove_cart_item' x.product.id x.id %}" onclick="return confirm('Are you really want delete this?')"><i style="background:#2083b0" class="mdi mdi-close"></i></a>
+                                <a class="cart-img" href="{{x.product.get_prodcut_details_url}}"><img style="height:auto;width:100%" src="{{x.product.image.url}}" alt="" /></a>
+                                <div class="menu-cart-text floatright">
+                                    <a href="{{x.product.get_prodcut_details_url}}">
+                                        <h5>{{x.product.name}}</h5>
+                                    </a>
+                                    
+                                    {% if x.variation.all %}
+                                        {% for item in x.variation.all %}
+                                        <span>{{item.variation_category | capfirst}} : {{item.variation_value | capfirst}}</span>
+                                        {% endfor %}
+                                    {% endif %}
+                                    <span>Price for each : KSh {{x.product.price}}</span>
+                                    <span>Quantity : {{x.quantity}}</span>
+                                    <strong>KSh {{x.sub_total}}</strong>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                            
+                            <div class="total">
+                                <span>total <strong>= KSh {{totalll}}</strong></span>
+                            </div><br>
+                            {% if '/cart/' not in request.path %}
+                            <a style="background:#fff;color:#1e81b0" class="out-menu" href="{% url 'cart:cart' %}">Go To Cart</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background:#fff">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <form id="searchh" action={% url 'shop:search' %} method="GET">
+                        <input  type="text" name="keyword" placeholder="Search...">
+                        <button style="height:49px; margin-bottom:6px; background:#fff;margin-left:-1px;border:None "  class="btn btn-warning" type="submit">
+                           <i style="color:#1e81b0" class="fa fa-search"></i>
+                        </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br>
+    <!--===================== Content ====================-->
+    {% block content %}
+
+    {% endblock content %}
+
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img" style="background-color: #000;">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo mb-30">
+                                <a href="#"><img src="{% static 'img/footer-logo.png' %}" alt=""></a>
+                            </div>
+                            <p>For the latest mobile phones and their accessories, fancy and plain back covers , flip covers ,screen guards, glass protectors, power banks and much more.</p>
+                            <div class="social-info">
+                                <a href="https://www.facebook.com/twoofuscommucations/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/twoofuscommunication/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>QUICK LINKS</h5>
+                            </div>
+                            <nav class="widget-nav">
+                                <ul>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="#news">News/Offers</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="#">Sitemap</a></li>
+                                    <li><a href="#">Orders</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>Help Centre</h5>
+                            </div>
+
+                            <nav class="widget-nav">
+                                <ul>
+                                    <li><a href="about.html">Delivery & Shipping</a></li>
+                                    <li><a href="shop.html">Terms & Conditions</a></li>
+                                    <li><a href="#news">After Sales Policy</a></li>
+                                    <li><a href="contact.html">Sitemap</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>CONTACT US</h5>
+                            </div>
+
+                            <div class="contact-information">
+                                <p><span>Address:</span> Nairobi, Moi avenue diamond exhibition shop A6</p>
+                                <p><span>Call/Whatsapp:</span> 0735-413-243</p>
+                                <p><span>Email:</span> 2ofuscommunication@gmail.com</p>
+                                <p><span>Opening Hours:</span> Mon - Sat: 8AM to 6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-md-6">
+                        <div class="copywrite-text">
+                            <p> <a href="https://eyern.dev" target="_blank">Crafted by Eyern</a></p>
+                        </div>
+                    </div>
+                    <!-- Footer Nav -->
+                    <div class="col-12 col-md-6">
+                        <div class="footer-nav">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Copyright ©2025 | Two Of Us Communication</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- all js here -->
+    <!-- jquery latest version -->
+    <script src="{% static 'js/vendor/jquery-1.12.3.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- owl.carousel js -->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <!-- meanmenu js -->
+    <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+    <!-- countdown JS -->
+    <script src="{% static 'js/countdown.js' %}"></script>
+    <!-- nivo.slider JS -->
+    <script src="{% static 'js/jquery.nivo.slider.pack.js' %}"></script>
+    <!-- simpleLens JS -->
+    <script src="{% static 'js/jquery.simpleLens.min.js' %}"></script>
+    <!-- jquery-ui js -->
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <!-- load-more js -->
+    <script src="{% static 'js/load-more.js' %}"></script>
+    <!-- plugins js -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <!-- main js -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.thumb a').click(function(e){
+                e.preventDefault();
+                $('.mainImage img').attr('src', $(this).attr("href"));
+                $('.mainImage a').attr('data-lens-image', $(this).attr("data-lens-image"));
+            })
+        })
+    </script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68adcfec657f6c192e5827ab/1j3jf8d7j';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

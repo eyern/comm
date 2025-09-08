@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Two Of Us Communication{% endblock title %}
+{% block content %}
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- header section end -->
+        <!-- Main-Slider -->
+        <div class="default-height ph-item">
+            <div class="slider-main owl-carousel">
+                <div class="bg-image one">
+                    <div class="slide-content slide-animation">
+                        <h1>Two Of Us Communication</h1>
+                    </div>
+                </div>
+                <div class="bg-image two">
+                    <div class="slide-content-2 slide-animation">
+                        <h2 class="slide-2-h2-a">Top Picks For You | Affordable Price. Fast Delivery.</h2>
+                        <h2 class="slide-2-h2-b"></h2>
+                    </div>
+                </div>
+                <div class="bg-image three">
+                    <div class="slide-content slide-animation">
+                        <h1>Shop & Save Big on Hottest Deals
+                        </h1>
+                    </div>
+                </div>
+                <div class="bg-image four">
+                    <div class="slide-content slide-animation">
+                        <h1>Shop top smartphones and accessories at unbeatable prices
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main-Slider /- -->
+
+		<!-- Collection -->
+		<section id="collection" class="section collection">
+			<div class="collection__container" data-aos="fade-up" data-aos-duration="1200">
+			  <div class="collection__box">
+				<div class="img__container">
+				  <img class="collection_02" src="{% static 'img/collection_02.png' %}" alt="">
+				</div>
+				<div class="collection__content">
+				  <div class="collection__data">
+					<span>Shop The Hottest Products</span>
+					<h1>ACCESSORIES</h1>
+					<a href="{% url 'shop:shop' %}">SHOP NOW</a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="collection__box">
+				<div class="img__container">
+				  <img class="collection_01" src="{% static 'img/collection_01.png' %}" alt="">
+				</div>
+				<div class="collection__content">
+				  <div class="collection__data">
+					<span>Catch Big Deals</span>
+					<h1>SMARTPHONES</h1>
+					<a href="{% url 'shop:shop' %}">SHOP NOW</a>
+				  </div>
+				</div>
+			  </div>
+		  </section>
+
+		<!-- tab-products section start -->
+		<div class="tab-products single-products products-two section-padding extra-padding-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-title text-center">
+							<div class="col-xs-12">
+								<div class="section-title text-center">
+									<h2>What's New</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-center tab-content">
+					<div class="tab-pane  fade in active" id="all">
+						<div class="wrapper">
+							<ul class="load-list load-list-two">
+								<li>
+									<div class="row text-center">
+										{% for product in products|slice:':8' %}
+										<div  class="col-xs-12 col-sm-6 col-md-3">
+											<div style="margin-top:10px" style="width:100%; height:500px" class="single-product">
+												<div class="product-img">
+													<a href="{{product.get_prodcut_details_url}}"><img style="width:100%; height:auto"src="{{ product.image.url}}" alt="Product Title" /></a>
+													<div class="actions-btn">
+														<a href="{% url 'cart:add_cart' product.id %}"><i class="mdi mdi-cart"></i></a>
+														<a href="{{product.get_prodcut_details_url}}"><i class="mdi mdi-eye"></i></a>
+													</div>
+												</div>
+												<div class="product-dsc">
+													<p><a href="{{product.get_prodcut_details_url}}">{{product.name}}</a></p>
+													<span>KSh {{product.price}}</span>
+												</div>
+											</div>
+										</div>
+										{% endfor %}
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+		<!-- tab-products section end -->
+		<!-- featured-products section end -->
+		<!--Start Footer Contact Info Area-->
+        <section class="footer-contact-info-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <ul class="footer-contact-info clearfix">
+                            <li>
+                                <div class="single-footer-contact-info">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <span class="mdi mdi-map-marker"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Nairobi,<br> Moi avenue diamond exhibition shop A6</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-footer-contact-info">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <span class="mdi mdi-phone"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Need Help?<br> <span>Call/Whatsapp 0735-413-243</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-footer-contact-info">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <span class="mdi mdi-email-outline"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Email Us<br> 2ofuscommunication@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br><br><br>
+        <!--End Footer Contact Info Area-->
+		<!-- banner full width start -->
+        <section class="banner_fullwidth black_fullwidth">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="banner_text">
+                            <h2>Get the Best deals online from Two Of Us Communication.</h2>
+                            <a href="{% url 'shop:shop' %}">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner full width end -->
+		
+{% endblock content %}

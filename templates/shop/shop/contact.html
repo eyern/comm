@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact Us{% endblock %}
+{% block content %}
+<!-- header section end -->
+        <!-- pages-title-start -->
+		<div style="background:#2083b0" class="pages-title section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="pages-title-text text-center">
+							{% if category_slug != None %}
+							<h2 style="color:#fff;text-transform: capitalize;">{{category_slug}}</h2>
+							{% else %}
+							<h2 style="color:#fff;text-transform: capitalize;">Contact Us</h2>
+							{% endif %}
+							<ul class="text-left">
+								<li ><a href="\">Home </a></li>
+								<li style="color:#fff"><span> // </span>Shop</li>
+								{% if category_slug != None %}
+								<li style="color:#fff"><span> // </span>{{category_slug}}</li>
+								{% endif %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<!-- pages-title-end -->
+        <br><br>
+        <!-- Contact Section Begin -->
+    <section class="contact spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                    <div class="contact__widget">
+                        <span class="icon_phone"></span>
+                        <h4>Call/Whatsapp</h4>
+                        <p>0735-413-243</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                    <div class="contact__widget">
+                        <span class="icon_pin_alt"></span>
+                        <h4>Address</h4>
+                        <p>Nairobi, Moi avenue diamond exhibition shop A6</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                    <div class="contact__widget">
+                        <span class="icon_clock_alt"></span>
+                        <h4>Opening Hours</h4>
+                        <p>8:30am - 9:30pm, Mon - Sat</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                    <div class="contact__widget">
+                        <span class="icon_mail_alt"></span>
+                        <h4>Email</h4>
+                        <p>2ofuscommunication@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+    <br><br>
+
+    <!-- Map Begin -->
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8194156268096!2d36.81926207496569!3d-1.2821302987056789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d447c88f69%3A0x3e6d565e0fe20f64!2sDiamond%20Exhibition!5e0!3m2!1sen!2ske!4v1756955903318!5m2!1sen!2ske"
+            height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="map-inside">
+            <i class="icon_pin"></i>
+            <div class="inside-widget">
+                <h4>Two Of Us Communication</h4>
+                <ul>
+                    <li>0735-413-243
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Map End -->
+	
+{% endblock content %}

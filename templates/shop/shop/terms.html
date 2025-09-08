@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Terms & Conditions{% endblock %}
+{% block content %}
+<!-- header section end -->
+        <!-- pages-title-start -->
+		<div style="background:#2083b0" class="pages-title section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="pages-title-text text-center">
+							{% if category_slug != None %}
+							<h2 style="color:#fff;text-transform: capitalize;">{{category_slug}}</h2>
+							{% else %}
+							<h2 style="color:#fff;text-transform: capitalize;">Terms & Conditions</h2>
+							{% endif %}
+							<ul class="text-left">
+								<li ><a href="\">Home </a></li>
+								<li style="color:#fff"><span> // </span>Shop</li>
+								{% if category_slug != None %}
+								<li style="color:#fff"><span> // </span>{{category_slug}}</li>
+								{% endif %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<!-- pages-title-end -->
+        <br><br>
+        
+	
+{% endblock content %}
