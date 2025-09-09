@@ -2,6 +2,9 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+from decouple import config
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 #load our environment variables
@@ -148,7 +151,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 # MEDIA
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '/app/data')
 
 
