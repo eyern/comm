@@ -4384,7 +4384,7 @@ li .single-footer-contact-info .text p span{
 	height: 506px; }
   
   .one {
-	background-image: url('/static/img/home.jpg'); }
+	background-image: url('/static/img/home-1.jpg'); }
   
   .two {
 	background-image: url('/static/img/home-2.jpg'); }
@@ -4406,7 +4406,7 @@ li .single-footer-contact-info .text p span{
 	top: 50%;
 	transform: translateY(-50%); }
 	.slide-content h1 {
-	  font-size: 32px;
+	  font-size: 52px;
 	  margin-bottom: 0;
 	  color: #ffffff;
 	  font-weight: 700;
@@ -4440,7 +4440,7 @@ li .single-footer-contact-info .text p span{
 	  margin-bottom: 0;
 	  color: #ffffff;
 	  font-family: 'Open Sans', sans-serif;
-	  font-size: 55px;
+	  font-size: 30px;
 	  line-height: 0.91;
 	  font-weight: bold; }
   

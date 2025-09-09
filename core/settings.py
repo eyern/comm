@@ -9,9 +9,9 @@ load_dotenv()
 
 SECRET_KEY = 'django-insecure-&!4%-vjbqun^7idhr9ov$3*!233xczz4zt4i1bj_x&ur14makw'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['web-production-6aeb2.up.railway.app', 'https://web-production-6aeb2.up.railway.app', 'twoofuscommunication.co.ke', 'https://twoofuscommunication.co.ke']
+ALLOWED_HOSTS = ['127.0.0.1','web-production-6aeb2.up.railway.app', 'https://web-production-6aeb2.up.railway.app', 'twoofuscommunication.co.ke', 'https://twoofuscommunication.co.ke']
 CSRF_TRUSTED_ORIGINS = ['https://web-production-6aeb2.up.railway.app', 'https://twoofuscommunication.co.ke']
 
 INSTALLED_APPS = [
@@ -164,7 +164,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT= 587 
-EMAIL_HOST_USER = 'eyernfuture@gmail.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # AWS_QUERYSTRING_AUTH = False
