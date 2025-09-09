@@ -9,7 +9,7 @@ load_dotenv()
 
 SECRET_KEY = 'django-insecure-&!4%-vjbqun^7idhr9ov$3*!233xczz4zt4i1bj_x&ur14makw'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['web-production-6aeb2.up.railway.app', 'https://web-production-6aeb2.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['https://web-production-6aeb2.up.railway.app']
