@@ -11,8 +11,8 @@ SECRET_KEY = 'django-insecure-&!4%-vjbqun^7idhr9ov$3*!233xczz4zt4i1bj_x&ur14makw
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['web-production-6aeb2.up.railway.app', 'https://web-production-6aeb2.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://web-production-6aeb2.up.railway.app']
+ALLOWED_HOSTS = ['web-production-6aeb2.up.railway.app', 'https://web-production-6aeb2.up.railway.app', 'twoofuscommunication.co.ke', 'https://twoofuscommunication.co.ke']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-6aeb2.up.railway.app', 'https://twoofuscommunication.co.ke']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
