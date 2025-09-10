@@ -285,11 +285,9 @@
                             <nav class="widget-nav">
                                 <ul>
                                     <li><a href="#">About Us</a></li>
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="#news">News/Offers</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="#">Sitemap</a></li>
-                                    <li><a href="#">Orders</a></li>
+                                    <li><a href="{% url 'shop:shop' %}">Shop</a></li>
+                                    <li><a href="{% url 'shop:contact' %}">Contact Us</a></li>
+                                    <li><a href="https://maps.app.goo.gl/hRTL8oSoqFjYMHTcA">Sitemap</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -304,10 +302,10 @@
 
                             <nav class="widget-nav">
                                 <ul>
-                                    <li><a href="about.html">Delivery & Shipping</a></li>
-                                    <li><a href="shop.html">Terms & Conditions</a></li>
-                                    <li><a href="#news">After Sales Policy</a></li>
-                                    <li><a href="contact.html">Sitemap</a></li>
+                                    <li><a href="{% url 'shop:contact' %}">Delivery & Shipping</a></li>
+                                    <li><a href="{% url 'shop:contact' %}">Terms & Conditions</a></li>
+                                    <li><a href="{% url 'shop:contact' %}">After Sales</a></li>
+                                    
                                 </ul>
                             </nav>
 
@@ -402,7 +400,7 @@
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
     s1.async=true;
-    s1.src='https://embed.tawk.to/68adcfec657f6c192e5827ab/1j3jf8d7j';
+    s1.src='https://embed.tawk.to/68bff6d8dc7e731927a1b927/1j4mtofoq';
     s1.charset='UTF-8';
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
