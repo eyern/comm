@@ -12,7 +12,7 @@ load_dotenv()
 
 SECRET_KEY = 'django-insecure-&!4%-vjbqun^7idhr9ov$3*!233xczz4zt4i1bj_x&ur14makw'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','web-production-6aeb2.up.railway.app', 'https://web-production-6aeb2.up.railway.app', 'twoofuscommunication.co.ke', 'https://twoofuscommunication.co.ke']
 CSRF_TRUSTED_ORIGINS = ['https://web-production-6aeb2.up.railway.app', 'https://twoofuscommunication.co.ke']
@@ -31,8 +31,6 @@ INSTALLED_APPS = [
     'orders',
 
     'storages',
-
-    'anymail',
     'whitenoise.runserver_nostatic',
 ]
 
@@ -133,26 +131,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#whitenoise static stuff
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'core/static'
-]
 
-#whitenoise static stuff
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # MEDIA
 MEDIA_URL = 'media/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, '/app/data')
 
 
