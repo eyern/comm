@@ -40,7 +40,7 @@
 			</div>
 			<br>
 			{% else %}
-			<div style="width:50%;background:#fff" class="wrap-login100">
+			<div style="width:auto;background:#fff" class="wrap-login100">
 				<form class="login100-form validate-form" action="{% url 'accounts:register' %}" method="POST">
 					{% csrf_token %}
 					
