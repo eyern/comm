@@ -179,7 +179,7 @@ def payments(request):
         'order':order,
     })
     to_email = request.user.email
-    send_email = EmailMessage(subject, message, to=['2ofuscommunication@gmail.com'])
+    send_email = EmailMessage(subject, message, to=['eyernfuture@gmail.com'])
     send_email.send()
 
     # Send order number and transation id back to sendDate method via JavaResponse
