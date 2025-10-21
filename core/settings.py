@@ -166,7 +166,7 @@ ANYMAIL = {
     "SENDINBLUE_API_KEY": os.environ['API'],  # Your Brevo API key
 }
 
-DEFAULT_FROM_EMAIL = "eyernfuture@gmail.com"  # Your verified custom domain email
+DEFAULT_FROM_EMAIL = "eyern.dev@gmail.com"  # Your verified custom domain email
 
 # AWS_QUERYSTRING_AUTH = False
 
