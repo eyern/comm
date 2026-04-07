@@ -84,17 +84,9 @@ DATABASES = {
         'USER' : 'postgres',
         'PASSWORD' : os.environ['DB_PASS'],
         'HOST' : 'shortline.proxy.rlwy.net',
-        'PORT' : '5432',
+        'PORT' : '37280',
     }
 }
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
