@@ -15,7 +15,8 @@ SECRET_KEY = 'django-insecure-&!4%-vjbqun^7idhr9ov$3*!233xczz4zt4i1bj_x&ur14makw
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','web-production-6aeb2.up.railway.app', 'https://web-production-6aeb2.up.railway.app', 'twoofuscommunication.co.ke', 'https://twoofuscommunication.co.ke']
-CSRF_TRUSTED_ORIGINS = ['https://web-production-6aeb2.up.railway.app', 'https://twoofuscommunication.co.ke']
+
+CSRF_TRUSTED_ORIGINS = ['https://twoofuscommunication.co.ke']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -82,7 +83,7 @@ DATABASES = {
         'NAME': 'railway',
         'USER' : 'postgres',
         'PASSWORD' : os.environ['DB_PASS'],
-        'HOST' : 'shortline.proxy.rlwy.net',
+        'HOST' : 'postgres.railway.internal',
         'PORT' : '37280',
     }
 }
@@ -165,8 +166,6 @@ EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 ANYMAIL = {
     "SENDINBLUE_API_KEY": os.environ['API'],  # Your Brevo API key
 }
-
-DEFAULT_FROM_EMAIL = "2ofuscommunication@gmail.com"  # Your verified custom domain email
 
 # AWS_QUERYSTRING_AUTH = False
 
