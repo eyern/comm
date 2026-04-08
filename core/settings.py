@@ -14,7 +14,7 @@ SECRET_KEY =  os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','web-production-6aeb2.up.railway.app', 'https://web-production-6aeb2.up.railway.app', 'twoofuscommunication.co.ke', 'https://twoofuscommunication.co.ke']
+ALLOWED_HOSTS = ['twoofuscommunication.co.ke', 'https://twoofuscommunication.co.ke']
 
 CSRF_TRUSTED_ORIGINS = ['https://twoofuscommunication.co.ke']
 
