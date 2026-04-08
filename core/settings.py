@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #load our environment variables
 load_dotenv()
 
-SECRET_KEY = 'django-insecure-&!4%-vjbqun^7idhr9ov$3*!233xczz4zt4i1bj_x&ur14makw'
+SECRET_KEY =  os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
@@ -156,7 +156,7 @@ PASSWORD_RESET_TIMEOUT_DAYS = 1
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 
 ANYMAIL = {
-    "SENDINBLUE_API_KEY": os.environ['API'],  # Your Brevo API key
+    "SENDINBLUE_API_KEY": os.environ['SENDBLUE_API'],  # Your Brevo API key
 }
 
 # AWS_QUERYSTRING_AUTH = False
