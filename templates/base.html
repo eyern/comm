@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}Deals Two Of Us{% endblock title %}</title>
+    <title>{% block title %}Deals & Offers at Two Of Us{% endblock title %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon -->
@@ -174,8 +174,6 @@
                                             {% endfor %}
                                         </ul>
                                     </li>
-                                    <li><a href="#">News/Offers</a></li>
-                                    <li><a href="#">About Us</a></li>
                                     <li><a href="{% url 'shop:contact' %}">Contact Us</a></li>
                                 </ul>
                             </nav>
@@ -195,8 +193,6 @@
                                                 {% endfor %}
                                             </ul>
                                         </li>
-                                        <li><a style="color:#fff" href="#">News/Updates</a></li>
-                                        <li><a style="color:#fff" href="#">About</a></li>
                                         <li><a style="color:#fff" href="{% url 'shop:contact' %}">Contact Us</a></li>
                                     </ul>
                                 </nav>
@@ -312,10 +308,10 @@
                 <div class="footer-column">
                     <h3>Shop By Brands</h3>
                     <ul class="footer-links">
-                        <li><a href="#"> Samsung</a></li>
-                        <li><a href="#"> Apple</a></li>
-                        <li><a href="#"> Xiaomi</a></li>
-                        <li><a href="#"> Google</a></li>
+                        <li><a href="https://twoofuscommunication.co.ke/shop/samsung/"> Samsung</a></li>
+                        <li><a href="https://twoofuscommunication.co.ke/shop/apple/"> Apple</a></li>
+                        <li><a href="https://twoofuscommunication.co.ke/shop/redmixiaomi/"> Xiaomi</a></li>
+                        <li><a href="https://twoofuscommunication.co.ke/shop/pixel/"> Google</a></li>
                     </ul>
                 </div>
 
@@ -323,9 +319,9 @@
                 <div class="footer-column">
                     <h3>Assistance</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Shipping & Returns</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Store Location</a></li>
+                        <li><a href="{% url 'shop:contact' %}">Shipping & Returns</a></li>
+                        <li><a href="{% url 'shop:contact' %}">Contact Us</a></li>
+                        <li><a href="{% url 'shop:contact' %}">Store Location</a></li>
                     </ul>
                 </div>
 
