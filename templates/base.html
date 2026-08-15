@@ -5,13 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}Two Of Us Communication{% endblock title %}</title>
+    <title>{% block title %}Deals Two Of Us{% endblock title %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.jpg' %}">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'img/logo.jpg' %}">
     <!-- Place favicon.ico in the root directory -->
     <!-- google fonts -->
     <!-- CSS only -->
@@ -84,6 +84,18 @@
 </head>
 
 <body style="background:#fff">
+
+    <div class="top-ticker-container">
+        <div class="ticker-wrapper">
+          <div class="ticker-item">🚚 We Offer Countrywide Delivery 🚚• </div>
+          <!-- Duplicate text for a seamless continuous loop -->
+          <div class="ticker-item" aria-hidden="true">🔥 Two Of Us Offers • Free shipping on orders over KSh 75,000 • </div>
+
+          <!-- Duplicate text for a seamless continuous loop -->
+          <div class="ticker-item" aria-hidden="true">Need Help? ☎️ Call / Whatsapp 0735-413-243 </div>
+        </div>
+      </div>
+      
 
     <!-- header section start -->
     <header style="background:#fff" class="header-one header-two">
@@ -254,113 +266,119 @@
 
     {% endblock content %}
 
+    <!-- FLOATING ACTIONS -->
+  <div class="fl-a">
+    <a href="tel:+254735413243" class="flb cl" title="Call 0735413243">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+        <path
+          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.43 10.34 19.79 19.79 0 01.36 1.75 2 2 0 012.34 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+      </svg>
+    </a>
+    <a href="https://wa.me/254735413243?text=Hi!%20I'm%20from%20TwoOfUs%20Communications%20website%20😊%20." target="_blank"
+      class="flb wa" title="WhatsApp 0735413243">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path
+          d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.868-1.426A9.945 9.945 0 0012 22c5.523 0 10-4.477 10-10S17.522 2 11.999 2zm0 18a7.95 7.95 0 01-4.071-1.118l-.291-.173-3.018.883.849-3.1-.19-.309A7.977 7.977 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" />
+      </svg>
+    </a>
+  </div>
 
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area bg-img" style="background-color: #000;">
-        <!-- Main Footer Area -->
-        <div class="main-footer-area">
-            <div class="container">
-                <div class="row">
 
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget">
-                            <div class="footer-logo mb-30">
-                                <a href="#"><img src="{% static 'img/footer-logo.png' %}" alt=""></a>
-                            </div>
-                            <p>For the latest mobile phones and their accessories, fancy and plain back covers , flip covers ,screen guards, glass protectors, power banks and much more.</p>
-                            <div class="social-info">
-                                <a href="https://www.facebook.com/twoofuscommucations/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="https://www.instagram.com/twoofuscommunication/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
+
+
+    <!-- Elegant Footer -->
+    <footer class="elegant-footer">
+        <div class="footer-container">
+            
+            <!-- Top Section Grid -->
+            <div class="footer-grid">
+                
+                <!-- Brand Info -->
+                <div class="footer-column">
+                    <div class="logo">
+                        <a href="\" class="logo"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>
                     </div>
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>QUICK LINKS</h5>
-                            </div>
-                            <nav class="widget-nav">
-                                <ul>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="{% url 'shop:shop' %}">Shop</a></li>
-                                    <li><a href="{% url 'shop:contact' %}">Contact Us</a></li>
-                                    <li><a href="https://maps.app.goo.gl/hRTL8oSoqFjYMHTcA">Sitemap</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>Help Centre</h5>
-                            </div>
-
-                            <nav class="widget-nav">
-                                <ul>
-                                    <li><a href="{% url 'shop:contact' %}">Delivery & Shipping</a></li>
-                                    <li><a href="{% url 'shop:contact' %}">Terms & Conditions</a></li>
-                                    <li><a href="{% url 'shop:contact' %}">After Sales</a></li>
-                                    
-                                </ul>
-                            </nav>
-
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>CONTACT US</h5>
-                            </div>
-
-                            <div class="contact-information">
-                                <p><span>Address:</span> Nairobi, Moi avenue diamond exhibition shop A6</p>
-                                <p><span>Call/Whatsapp:</span> 0735-413-243</p>
-                                <p><span>Email:</span> 2ofuscommunication@gmail.com</p>
-                                <p><span>Opening Hours:</span> Mon - Sat: 8AM to 6PM</p>
-                            </div>
-                        </div>
+                    <p>Get the latest Brand Phones in Kenya. Two Of Us is your one-stop shop for all your mobile phone needs in Kenya.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/twoofuscommunication/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/twoofuscommucations/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Footer Bottom Area -->
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="border-line"></div>
-                    </div>
-                    <!-- Copywrite Text -->
-                    <div class="col-12 col-md-6">
-                        <div class="copywrite-text">
-                            <p> <a href="https://eyern.dev" target="_blank">Crafted by Eyern</a></p>
-                        </div>
-                    </div>
-                    <!-- Footer Nav -->
-                    <div class="col-12 col-md-6">
-                        <div class="footer-nav">
-                            <nav>
-                                <ul>
-                                    <li><a href="#">Copyright ©2025 | Two Of Us Communication</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                <!-- Shop Navigation -->
+                <div class="footer-column">
+                    <h3>Shop By Brands</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"> Samsung</a></li>
+                        <li><a href="#"> Apple</a></li>
+                        <li><a href="#"> Xiaomi</a></li>
+                        <li><a href="#"> Google</a></li>
+                    </ul>
                 </div>
+
+                <!-- Customer Service -->
+                <div class="footer-column">
+                    <h3>Assistance</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Store Location</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Customer Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"> Need Help? ☎️ Call/Whatsapp 0735-413-243</a></li>
+                    </ul>
+                </div>
+
             </div>
+
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Two Of Us Communications. | Crafted by Eyern</p>
+            </div>
+
         </div>
     </footer>
-    <!-- ##### Footer Area End ##### -->
 
     <!-- all js here -->
+    <script>
+        
+    </script>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const container = document.querySelector('.slider-container');
+
+        function updateSlider() {
+        container.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        updateSlider();
+        }
+
+        // Auto slide every 4 seconds
+        let autoSlide = setInterval(() => {
+        moveSlide(1);
+        }, 4000);
+
+        // Pause auto-slide on hover
+        const sliderElement = document.querySelector('.hero-slider');
+        sliderElement.addEventListener('mouseenter', () => clearInterval(autoSlide));
+        sliderElement.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(() => moveSlide(1), 4000);
+        });
+
+    </script>
     <!-- jquery latest version -->
     <script src="{% static 'js/vendor/jquery-1.12.3.min.js' %}"></script>
     <!-- bootstrap js -->
@@ -394,19 +412,6 @@
             })
         })
     </script>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68bff6d8dc7e731927a1b927/1j4mtofoq';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
 </body>
 
 </html>

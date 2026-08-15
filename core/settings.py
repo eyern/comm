@@ -116,8 +116,6 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
-
 USE_TZ = True
 
 
@@ -168,4 +166,3 @@ ANYMAIL = {
 # AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 # AWS_STORAGE_BUCKET_NAME = 'e--shop-bucket'
-
