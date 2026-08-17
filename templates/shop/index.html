@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Two Of Us Communication{% endblock title %}
+{% block title %}Deals & Offers at Two Of Us{% endblock title %}
 {% block content %}
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -16,6 +16,7 @@
                   <h1>Two Of Us Communications</h1>
                   <p>Get The Best Deals from Two Of Us</p>
                   <a href="{% url 'shop:shop' %}" class="btn">Shop Now</a>
+                  <br><br>
                 </div>
                 <img src="{% static 'img/2-comm.png' %}" alt="Summer Collection">
               </div>
@@ -26,6 +27,7 @@
                   <h1>Deals & Offers @Two Of Us 🔥</h1>
                   <p>Discover the latest trends with up to 40% off selected items.</p>
                   <a href="{% url 'shop:shop' %}" class="btn">Explore Deals</a>
+                  <br><br>
                 </div>
                 <img src="{% static 'img/comm-home.jpg' %}" alt="Minimalist Watches">
               </div>
@@ -34,6 +36,7 @@
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
           </div>
+          <br><br>
           
 
         <section class="category-banners-container">

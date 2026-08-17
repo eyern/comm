@@ -14,9 +14,9 @@ SECRET_KEY =  os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['twoofuscommunication.co.ke', 'https://twoofuscommunication.co.ke']
+ALLOWED_HOSTS = ['twoofus.co.ke', 'https://twoofus.co.ke']
 
-CSRF_TRUSTED_ORIGINS = ['https://twoofuscommunication.co.ke']
+CSRF_TRUSTED_ORIGINS = ['https://twoofus.co.ke']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -157,12 +157,3 @@ ANYMAIL = {
     "SENDINBLUE_API_KEY": os.environ['SENDBLUE_API'],  # Your Brevo API key
 }
 
-# AWS_QUERYSTRING_AUTH = False
-
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-
-# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-
-# AWS_STORAGE_BUCKET_NAME = 'e--shop-bucket'
