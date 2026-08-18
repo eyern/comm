@@ -4487,7 +4487,7 @@ button.next {
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 30px;
-	color: var(--text-secondary);
+	color: #fff;
 	font-size: 12px;
 }
 
